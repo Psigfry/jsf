@@ -4,27 +4,6 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
-
-    <navigation-rule>
-        <from-view-id>*</from-view-id>
-
-        <navigation-case>
-            <from-outcome>nextPage</from-outcome>
-            <to-view-id>/views/secondPage.xhtml</to-view-id>
-        </navigation-case>
-
-    </navigation-rule>
-
-    <navigation-rule>
-        <from-view-id>*</from-view-id>
-
-        <navigation-case>
-            <from-outcome>lastPage</from-outcome>
-            <to-view-id>/views/lastPage.xhtml</to-view-id>
-        </navigation-case>
-
-    </navigation-rule>
-
     <navigation-rule>
         <from-view-id>*</from-view-id>
 
@@ -33,6 +12,35 @@
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
 
+    </navigation-rule>
+
+    <!--    Log in & Registration    -->
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/register.xhtml</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+
+        <navigation-case>
+            <from-outcome></from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>admin</from-outcome>
+            <to-view-id>/admin.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
   
 </faces-config>

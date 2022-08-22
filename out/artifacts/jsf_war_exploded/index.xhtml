@@ -6,13 +6,14 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"/>
-        <title>JSF Title</title>
-        <h:outputStylesheet library="css" name="style.css"  />
-    </h:head>
+    <ui:include src="template/head.xhtml"></ui:include>
+    <ui:include src="template/header.xhtml"></ui:include>
     <h:body>
-        <h:button styleClass="btn btn-primary" outcome="lastPage" value="Last Page"></h:button>
+        <div class="container" style="text-align: center">
+            <h1>Welcome to Home page!</h1>
+            <p>To continue, you need to log in or register.</p>
+        </div>
     </h:body>
+    <ui:include src="template/footer.xhtml"></ui:include>
 </f:view>
 </html>
